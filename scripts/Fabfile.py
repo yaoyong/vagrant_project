@@ -6,7 +6,7 @@ from time import sleep
 from StringIO import StringIO
 import sys
 
-HOSTS = ['52.24.12.163']
+HOSTS = ['172.31.0.102']
 USER = 'ubuntu'
 
 def environment():
@@ -14,5 +14,4 @@ def environment():
     env.hosts = HOSTS
 
 def deploy():
-    run("cd /var/www/html && git pull origin master && php composer.phar install && php vendor/bin/phinx migrate -e production")
-    
+    run("cd /var/www/html && git pull origin master && php composer.phar install")
